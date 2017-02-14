@@ -97,3 +97,4 @@ DerivedData
 *.xccheckout
 *.moved-aside
 *.xcuserstate
+generated-objc
