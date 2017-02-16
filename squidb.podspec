@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "squidb"
-  s.version      = "4.0.0.pre.beta.1"
+  s.version      = "3.2.3"
   s.summary      = "SquiDB is a SQLite database library for Android and iOS"
   s.ios.deployment_target = '7.0'
   #s.osx.deployment_target = '10.9'
@@ -23,7 +23,7 @@ designed to make it as easy as possible to work with SQLite databases while
   s.homepage     = "https://github.com/yahoo/squidb/wiki"
   s.license      = "Apache License 2.0"
   s.author        = { "Yahoo Inc." => "email@address.com" }
-  s.source       = { :git => "https://github.com/mirego/squidb.git", :branch => "add_podspec" }
+  s.source       = { :git => "https://github.com/mirego/squidb.git", :tag => s.version }
   s.source_files  = ["squidb-ios/native/**/*.{h,m}", "generated-objc/**/*.{h,m}"]
   s.dependency 'J2ObjC@mirego', '~> 1.0'
 
