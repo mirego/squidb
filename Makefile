@@ -11,7 +11,6 @@ SOURCEPATH=$(SQUIDB_SRC):$(SQUIDB_ANNOTATIONS_SRC):$(SQUIDB_JSON_SRC):$(SQUIDB_J
 prepare:
 	find $(SQUIDB_SRC) $(SQUIDB_IOS_SRC) $(SQUIDB_ANNOTATIONS_SRC) -name "*.java" | xargs $(J2OBJC) \
 		-sourcepath "$(SOURCEPATH)" \
-		--no-package-directories \
 		-use-arc \
 		-d generated-objc \
 		-encoding UTF-8 \
