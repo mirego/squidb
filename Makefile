@@ -8,19 +8,21 @@ SQUIDB_IOS_NATIVE=squidb-ios/native
 
 SOURCEPATH=$(SQUIDB_SRC):$(SQUIDB_ANNOTATIONS_SRC):$(SQUIDB_JSON_SRC):$(SQUIDB_JSON_ANNOTATIONS_SRC):$(SQUIDB_IOS_SRC)
 
-prepare:
+j2objc:
 	find $(SQUIDB_SRC) $(SQUIDB_IOS_SRC) $(SQUIDB_ANNOTATIONS_SRC) -name "*.java" | xargs $(J2OBJC) \
 		-sourcepath "$(SOURCEPATH)" \
-		-use-arc \
-		-d generated-objc \
+		-d squidb-ios/j2objc \
 		-encoding UTF-8 \
 		-Werror \
 		--batch-translate-max=4096 \
+		--build-closure \
 		--doc-comments \
 		--generate-deprecated \
 		-J-Xmx2G \
-		--segmented-headers \
-		--strip-gwt-incompatible \
-		--strip-reflection \
+		--no-package-directories \
 		-use-arc \
-	
+		--nullability \
+		--swift-friendly \
+
+clean:
+	rm -rf squidb-ios/j2objc

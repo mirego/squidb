@@ -101,4 +101,4 @@ DerivedData
 *.xccheckout
 *.moved-aside
 *.xcuserstate
-generated-objc
+squidb-ios/j2objc
