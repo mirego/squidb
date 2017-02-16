@@ -23,5 +23,6 @@ prepare:
 		--segmented-headers \
 		--strip-gwt-incompatible \
 		--strip-reflection \
+		--prefix 'com.yahoo.squidb.*=SQUIDB' \
 		-use-arc \
 	
