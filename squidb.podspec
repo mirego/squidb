@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "squidb"
-  s.version      = "3.2.3"
+  s.version      = "3.2.3-mirego"
   s.summary      = "SquiDB is a SQLite database library for Android and iOS"
   s.ios.deployment_target = '7.0'
   #s.osx.deployment_target = '10.9'
