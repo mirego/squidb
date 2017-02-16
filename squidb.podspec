@@ -23,7 +23,7 @@ designed to make it as easy as possible to work with SQLite databases while
   s.homepage     = "https://github.com/yahoo/squidb/wiki"
   s.license      = "Apache License 2.0"
   s.author        = { "Yahoo Inc." => "email@address.com" }
-  s.source       = { :git => "https://github.com/mirego/squidb.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/mirego/squidb.git", :branch => "mirego-3.2.3" }
   s.source_files  = ["squidb-ios/native/**/*.{h,m}", "generated-objc/**/*.{h,m}"]
   s.dependency 'J2ObjC@mirego', '~> 1.0'
 
