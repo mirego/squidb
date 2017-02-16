@@ -11,7 +11,7 @@ SOURCEPATH=$(SQUIDB_SRC):$(SQUIDB_ANNOTATIONS_SRC):$(SQUIDB_JSON_SRC):$(SQUIDB_J
 j2objc:
 	find $(SQUIDB_SRC) $(SQUIDB_IOS_SRC) $(SQUIDB_ANNOTATIONS_SRC) -name "*.java" | xargs $(J2OBJC) \
 		-sourcepath "$(SOURCEPATH)" \
-		-d squidb-ios/j2objc \
+		-d squidb-j2objc \
 		-encoding UTF-8 \
 		-Werror \
 		--batch-translate-max=4096 \
@@ -19,10 +19,11 @@ j2objc:
 		--doc-comments \
 		--generate-deprecated \
 		-J-Xmx2G \
-		--no-package-directories \
 		-use-arc \
 		--nullability \
 		--swift-friendly \
 
+	cp -R squidb-ios/native/* squidb-j2objc
+
 clean:
-	rm -rf squidb-ios/j2objc
+	rm -rf squidb-j2objc

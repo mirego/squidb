@@ -24,7 +24,8 @@ DESC
   s.license = "Apache License 2.0"
   s.author = { "Yahoo Inc." => "email@address.com" }
   s.source = { :git => "https://github.com/mirego/squidb.git", :branch => "mirego-3.2.3" }
-  s.source_files = [ "squidb-ios/**/*.{h,m}" ]
+  s.source_files = [ "squidb-j2objc/**/*.{h,m}" ]
+  s.header_mappings_dir = "squidb-j2objc"
   s.prepare_command = "make clean j2objc"
   s.dependency 'J2ObjC@mirego', '~> 1.0'
   s.libraries = "sqlite3"
