@@ -27,7 +27,7 @@ designed to make it as easy as possible to work with SQLite databases while
   s.source_files  = ["squidb-ios/native/**/*.{h,m}", "generated-objc/**/*.{h,m}"]
   s.dependency 'J2ObjC@mirego', '~> 1.0'
 
-  s.prepare_command = "make"
+  s.prepare_command = "make prepare"
   s.libraries = "sqlite3"
 end
 
